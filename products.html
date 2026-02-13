@@ -80,22 +80,32 @@
                 <h3>Filter By</h3>
                 <div class="filter-group" style="margin-top: 20px;">
                     <h4>Brand</h4>
-                    <label class="filter-option"><input type="checkbox"> Kyocera</label>
-                    <label class="filter-option"><input type="checkbox"> HP</label>
-                    <label class="filter-option"><input type="checkbox"> Canon</label>
-                    <label class="filter-option"><input type="checkbox"> Epson</label>
-                    <label class="filter-option"><input type="checkbox"> Dell</label>
+                    <label class="filter-option"><input type="checkbox" class="brand-filter" value="Kyocera">
+                        Kyocera</label>
+                    <label class="filter-option"><input type="checkbox" class="brand-filter" value="Konica Minolta">
+                        Konica Minolta</label>
+                    <label class="filter-option"><input type="checkbox" class="brand-filter" value="HP"> HP</label>
+                    <label class="filter-option"><input type="checkbox" class="brand-filter" value="Canon">
+                        Canon</label>
+                    <label class="filter-option"><input type="checkbox" class="brand-filter" value="Epson">
+                        Epson</label>
+                    <label class="filter-option"><input type="checkbox" class="brand-filter" value="Dell"> Dell</label>
                 </div>
                 <div class="filter-group">
                     <h4>Category</h4>
-                    <label class="filter-option"><input type="checkbox"> Photocopiers</label>
-                    <label class="filter-option"><input type="checkbox"> Laptops</label>
-                    <label class="filter-option"><input type="checkbox"> Toners & Ink</label>
-                    <label class="filter-option"><input type="checkbox"> Accessories</label>
+                    <label class="filter-option"><input type="checkbox" class="category-filter" value="Photocopiers">
+                        Photocopiers</label>
+                    <label class="filter-option"><input type="checkbox" class="category-filter" value="Laptops">
+                        Laptops</label>
+                    <label class="filter-option"><input type="checkbox" class="category-filter" value="Toners & Ink">
+                        Toners & Ink</label>
+                    <label class="filter-option"><input type="checkbox" class="category-filter" value="Accessories">
+                        Accessories</label>
                 </div>
                 <div class="filter-group">
-                    <h4>Price Range</h4>
-                    <input type="range" min="0" max="500000" style="width: 100%;">
+                    <h4>Max Price: <span id="price-value">KSh 500,000</span></h4>
+                    <input type="range" id="price-range" min="0" max="500000" step="5000" value="500000"
+                        style="width: 100%;">
                     <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
                         <span>KSh 0</span>
                         <span>KSh 500k+</span>
@@ -111,11 +121,11 @@
                     </div>
                     <div class="product-grid">
                         <!-- Kyocera 1 with Blueprint -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Kyocera" data-category="Photocopiers" data-price="145000">
                             <div class="product-badge">BEST SELLER</div>
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&q=80&w=250"
-                                    alt="Kyocera 3551">
+                                <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=250"
+                                    alt="Kyocera Taskalfa 3551ci">
                             </div>
                             <div class="product-info">
                                 <h3>Refurbished Kyocera Taskalfa 3551ci</h3>
@@ -155,7 +165,7 @@
                             </div>
                         </div>
                         <!-- Photocopier 13: Kyocera Ecosys M3145idn (NEW ITEM) -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Kyocera" data-category="Photocopiers" data-price="160000">
                             <div class="product-badge">NEW ITEM</div>
                             <div class="product-image">
                                 <img src="Kyocera%20ECOSYS%20M3145idn%20MFP.jpeg" alt="Kyocera Ecosys M3145idn MFP">
@@ -176,7 +186,8 @@
                             </div>
                         </div>
                         <!-- Photocopier 1 -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Konica Minolta" data-category="Photocopiers"
+                            data-price="75000">
                             <div class="product-image">
                                 <img src="Konica%20Minolta%20Bizhub%20C280%20Photocopier.jpeg"
                                     alt="Konica Minolta Bizhub C280">
@@ -199,7 +210,8 @@
                             </div>
                         </div>
                         <!-- Photocopier 2 -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Konica Minolta" data-category="Photocopiers"
+                            data-price="90000">
                             <div class="product-image">
                                 <img src="Konica%20Minolta%20Bizhub%20C284.jpeg" alt="Konica Minolta Bizhub C284">
                             </div>
@@ -223,7 +235,8 @@
                             </div>
                         </div>
                         <!-- Photocopier 3 -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Konica Minolta" data-category="Photocopiers"
+                            data-price="70000">
                             <div class="product-image">
                                 <img src="Konica%20minolta%20bizhub%20c220.jpeg" alt="Konica Minolta Bizhub C220">
                             </div>
@@ -245,7 +258,8 @@
                             </div>
                         </div>
                         <!-- Photocopier 4 -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Konica Minolta" data-category="Photocopiers"
+                            data-price="100000">
                             <div class="product-image">
                                 <img src="Konica%20minolta%20bizhub%20c364.jpeg" alt="Konica Minolta Bizhub C364">
                             </div>
@@ -267,7 +281,8 @@
                             </div>
                         </div>
                         <!-- Photocopier 5 -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Konica Minolta" data-category="Photocopiers"
+                            data-price="115000">
                             <div class="product-image">
                                 <img src="Konica%20Minolta%20Bizhub%20C454.jpeg" alt="Konica Minolta Bizhub C454">
                             </div>
@@ -289,7 +304,8 @@
                             </div>
                         </div>
                         <!-- Photocopier 6: Bizhub C308 -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Konica Minolta" data-category="Photocopiers"
+                            data-price="80000">
                             <div class="product-image">
                                 <img src="Konica%20minolta%20bizhub%20c308.jpeg" alt="Konica Minolta Bizhub C308">
                             </div>
@@ -311,7 +327,8 @@
                             </div>
                         </div>
                         <!-- Photocopier 7: Bizhub C227 -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Konica Minolta" data-category="Photocopiers"
+                            data-price="90000">
                             <div class="product-image">
                                 <img src="Konica%20minolta%20bizhub%20c227.jpeg" alt="Konica Minolta Bizhub C227">
                             </div>
@@ -330,7 +347,8 @@
                             </div>
                         </div>
                         <!-- Photocopier 8: Bizhub C287 -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Konica Minolta" data-category="Photocopiers"
+                            data-price="80000">
                             <div class="product-image">
                                 <img src="Bizhub%20c%20287.jpeg" alt="Konica Minolta Bizhub C287">
                             </div>
@@ -352,7 +370,7 @@
                             </div>
                         </div>
                         <!-- Photocopier 9: Kyocera Taskalfa 3510i -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Kyocera" data-category="Photocopiers" data-price="95000">
                             <div class="product-image">
                                 <img src="3510i.jpeg" alt="Kyocera Taskalfa 3510i">
                             </div>
@@ -372,7 +390,7 @@
                             </div>
                         </div>
                         <!-- Photocopier 10: Kyocera Taskalfa 3511i -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Kyocera" data-category="Photocopiers" data-price="85000">
                             <div class="product-image">
                                 <img src="Kyocera%20Taskalfa%203511i.jpeg" alt="Kyocera Taskalfa 3511i">
                             </div>
@@ -393,7 +411,7 @@
                             </div>
                         </div>
                         <!-- Photocopier 11: Kyocera Ecosys M4125idn -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Kyocera" data-category="Photocopiers" data-price="290000">
                             <div class="product-image">
                                 <img src="Kyocera%20Ecosys%20M4125idn.jpeg" alt="Kyocera Ecosys M4125idn">
                             </div>
@@ -413,7 +431,7 @@
                             </div>
                         </div>
                         <!-- Photocopier 12: Kyocera Ecosys M2135dn -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Kyocera" data-category="Photocopiers" data-price="105000">
                             <div class="product-image">
                                 <img src="Kyocera%20Ecosys%20M2135dn.jpeg" alt="Kyocera Ecosys M2135dn">
                             </div>
@@ -433,7 +451,8 @@
                             </div>
                         </div>
                         <!-- Toner 1 -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Konica Minolta" data-category="Toners & Ink"
+                            data-price="4500">
                             <div class="product-image">
                                 <img src="TN%20Toner%20216.jpeg" alt="TN 216 Toner">
                             </div>
@@ -448,7 +467,8 @@
                             </div>
                         </div>
                         <!-- Toner 2 -->
-                        <div class="product-card">
+                        <div class="product-card" data-brand="Konica Minolta" data-category="Toners & Ink"
+                            data-price="5000">
                             <div class="product-image">
                                 <img src="Tn%20321%20toner.jpeg" alt="TN 321 Toner">
                             </div>

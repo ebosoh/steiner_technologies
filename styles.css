@@ -188,7 +188,7 @@ nav {
 }
 
 .mobile-nav-toggle {
-  display: none;
+  display: none !important;
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--black);
@@ -491,7 +491,7 @@ footer {
   }
 
   .mobile-nav-toggle {
-    display: block;
+    display: block !important;
     order: 2;
     /* Move to top right */
     padding: 10px;
