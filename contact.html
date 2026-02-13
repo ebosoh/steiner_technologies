@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Service Booking | Steina Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .booking-form {
+            background: var(--gray-light);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .contact-info-card {
+            margin-bottom: 30px;
+        }
+
+        .contact-info-card i {
+            color: var(--cyan);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .map-container {
+            height: 400px;
+            background: #eee;
+            margin-top: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 5px solid var(--black);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="Steina%20logo.jpeg" alt="Steina Technologies"></a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="contact.html">Repairs & Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search products...">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <div class="section-title">
+                <h2>Get in Touch & Book Repairs</h2>
+                <p>Nairobi’s premier tech hub on Tom Mboya Street. We bridge the gap between high-end technology and
+                    local affordability.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Booking Form -->
+                <div class="booking-form">
+                    <h3>Book a Technician</h3>
+                    <p style="margin-bottom: 25px; font-size: 0.9rem;">Fill out the form below and our team will contact
+                        you within 60 minutes.</p>
+                    <form action="#">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="+254..." required>
+                        </div>
+                        <div class="form-group">
+                            <label>Service Type</label>
+                            <select required>
+                                <option value="">Select Service</option>
+                                <option value="photocopier">Photocopier Repair</option>
+                                <option value="laptop">Laptop/PC Repair</option>
+                                <option value="software">Software Installation</option>
+                                <option value="quote">Request a Product Quote</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Device Model</label>
+                            <input type="text" placeholder="e.g., Kyocera Taskalfa 3551ci">
+                        </div>
+                        <div class="form-group">
+                            <label>Issue Description</label>
+                            <textarea rows="4" placeholder="Briefly describe the problem..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Booking</button>
+                    </form>
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h3>Office Location</h3>
+                    <div style="margin-top: 30px;">
+                        <div class="contact-info-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Address:</strong> Anna's Arcade Building, Tom Mboya Street, Nairobi, Kenya.
+                        </div>
+                        <div class="contact-info-card">
+                            <i class="fas fa-phone-alt"></i>
+                            <strong>Phone:</strong> +254 726 895 268
+                        </div>
+                        <div class="contact-info-card">
+                            <i class="fab fa-whatsapp"></i>
+                            <strong>WhatsApp:</strong> +254 726 895 268
+                        </div>
+                        <div class="contact-info-card">
+                            <i class="fas fa-clock"></i>
+                            <strong>Hours:</strong> Mon - Fri: 8:00 AM – 6:00 PM | Sat: 9:00 AM – 4:00 PM
+                        </div>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6777.8746527566245!2d36.8222784768299!3d-1.2829189356263135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f117534a0c70b%3A0x8dacde10addee531!2sAnna&#39;s%20Arcade!5e1!3m2!1sen!2ske!4v1770957772584!5m2!1sen!2ske"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div style="margin-top: 40px;">
+                        <h3>Connect with Us</h3>
+                        <div style="display: flex; gap: 20px; font-size: 2rem; margin-top: 15px;">
+                            <a href="#" style="color: var(--cyan);"><i class="fab fa-facebook"></i></a>
+                            <a href="#" style="color: var(--magenta);"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="color: var(--cyan);"><i class="fab fa-twitter"></i></a>
+                            <a href="#" style="color: var(--magenta);"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-box">
+                    <a href="index.html" class="logo footer-logo-bg"><img src="Steina%20logo.jpeg"
+                            alt="Steina Technologies"></a>
+                    <p>Nairobi’s premier hub for office automation and personal computing. Hardware and Heartbeat.</p>
+                </div>
+                <!-- ... Repeat footer as in index.html for consistency ... -->
+                <div class="footer-box">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop Products</a></li>
+                        <li><a href="contact.html">Repair Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4>Business Hours</h4>
+                    <p>Mon - Fri: 8:00 AM – 6:00 PM</p>
+                    <p>Sat: 9:00 AM – 4:00 PM</p>
+                </div>
+                <div class="footer-box">
+                    <h4>Location</h4>
+                    <p>Tom Mboya Street, Nairobi, Kenya</p>
+                    <p>Phone: +254 726 895 268</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Steina Technologies Solution. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/254726895268" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

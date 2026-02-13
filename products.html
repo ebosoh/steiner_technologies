@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Ecosystem | Steina Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .filter-sidebar {
+            padding: 20px;
+            background: var(--gray-light);
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .filter-group {
+            margin-bottom: 25px;
+        }
+
+        .filter-group h4 {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--black);
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .product-page-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .product-page-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="Steina%20logo.jpeg" alt="Steina Technologies"></a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="contact.html">Repairs & Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search products...">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="product-page-layout">
+            <!-- Sidebar -->
+            <aside class="filter-sidebar">
+                <h3>Filter By</h3>
+                <div class="filter-group" style="margin-top: 20px;">
+                    <h4>Brand</h4>
+                    <label class="filter-option"><input type="checkbox"> Kyocera</label>
+                    <label class="filter-option"><input type="checkbox"> HP</label>
+                    <label class="filter-option"><input type="checkbox"> Canon</label>
+                    <label class="filter-option"><input type="checkbox"> Epson</label>
+                    <label class="filter-option"><input type="checkbox"> Dell</label>
+                </div>
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label class="filter-option"><input type="checkbox"> Photocopiers</label>
+                    <label class="filter-option"><input type="checkbox"> Laptops</label>
+                    <label class="filter-option"><input type="checkbox"> Toners & Ink</label>
+                    <label class="filter-option"><input type="checkbox"> Accessories</label>
+                </div>
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <input type="range" min="0" max="500000" style="width: 100%;">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
+                        <span>KSh 0</span>
+                        <span>KSh 500k+</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Product Grid -->
+            <div>
+                <section class="container" style="padding: 0;">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Our Hardware</h2>
+                    </div>
+                    <div class="product-grid">
+                        <!-- Kyocera 1 with Blueprint -->
+                        <div class="product-card">
+                            <div class="product-badge">BEST SELLER</div>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&q=80&w=250"
+                                    alt="Kyocera 3551">
+                            </div>
+                            <div class="product-info">
+                                <h3>Refurbished Kyocera Taskalfa 3551ci</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 35ppm Color & B/W</li>
+                                    <li>Resolution: 1200 x 1200 dpi</li>
+                                    <li>Max Paper Capacity: 7,150 Sheets</li>
+                                </ul>
+
+                                <div
+                                    style="background: #fdfdfd; padding: 10px; border-left: 3px solid var(--magenta); margin-bottom: 15px;">
+                                    <h4 style="font-size: 0.8rem; color: var(--magenta);">Why Buy This?</h4>
+                                    <p style="font-size: 0.75rem;">Engineered for durability and low cost-per-page.
+                                        Perfect for high-volume office environments requiring vibrant color output.</p>
+                                </div>
+
+                                <table
+                                    style="width: 100%; font-size: 0.7rem; border-collapse: collapse; margin-bottom: 20px;">
+                                    <tr style="border-bottom: 1px solid #eee;">
+                                        <td style="padding: 5px; font-weight: 700;">RAM</td>
+                                        <td style="padding: 5px; text-align: right;">3.5 GB</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #eee;">
+                                        <td style="padding: 5px; font-weight: 700;">Processor</td>
+                                        <td style="padding: 5px; text-align: right;">Freescale QorIQ P1022</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #eee;">
+                                        <td style="padding: 5px; font-weight: 700;">Connectivity</td>
+                                        <td style="padding: 5px; text-align: right;">USB 2.0, Gigabit LAN</td>
+                                    </tr>
+                                </table>
+
+                                <div class="product-price">KSh 145,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20the%20Kyocera%20Taskalfa%203551ci"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 13: Kyocera Ecosys M3145idn (NEW ITEM) -->
+                        <div class="product-card">
+                            <div class="product-badge">NEW ITEM</div>
+                            <div class="product-image">
+                                <img src="Kyocera%20ECOSYS%20M3145idn%20MFP.jpeg" alt="Kyocera Ecosys M3145idn MFP">
+                            </div>
+                            <div class="product-info">
+                                <h3>Kyocera Ecosys M3145idn</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 45 ppm (A4 size)</li>
+                                    <li>Type: Monochrome Multifunctional Laser Printer</li>
+                                    <li>Format: A4 maximum paper size</li>
+                                    <li>Versatile: Perfect for office, home, and school environments</li>
+                                </ul>
+                                <div class="product-price">KSh 160,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Kyocera%20Ecosys%20M3145idn"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 1 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="Konica%20Minolta%20Bizhub%20C280%20Photocopier.jpeg"
+                                    alt="Konica Minolta Bizhub C280">
+                            </div>
+                            <div class="product-info">
+                                <h3>Konica Minolta Bizhub C280</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 28 Pages/Min</li>
+                                    <li>Copier / Network Printer / Color Scanner</li>
+                                    <li>Format: Maximum paper size A3</li>
+                                    <li>Resolution: 1200dpi</li>
+                                    <li>Features: Duplex & ARDF</li>
+                                    <li>Media: Print up to 271gsm</li>
+                                </ul>
+                                <div class="product-price">KSh 75,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Konica%20Minolta%20Bizhub%20C280"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="Konica%20Minolta%20Bizhub%20C284.jpeg" alt="Konica Minolta Bizhub C284">
+                            </div>
+                            <div class="product-info">
+                                <h3>Konica Minolta Bizhub C284</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 28 ppm (Color & B/W)</li>
+                                    <li>Functions: Copy, Print, Scan, Optional Fax</li>
+                                    <li>Resolution: 1200 x 1200 dpi</li>
+                                    <li>Dual Scan Document Feeder (160 ipm)</li>
+                                    <li>Paper Size: A6 to SRA3 & Banner</li>
+                                    <li>Media Weight: Up to 300 gsm</li>
+                                    <li>Automatic Duplex Printing</li>
+                                    <li>Connectivity: Gigabit LAN & Optional Wi-Fi</li>
+                                </ul>
+                                <div class="product-price">KSh 90,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Konica%20Minolta%20Bizhub%20C284"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 3 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="Konica%20minolta%20bizhub%20c220.jpeg" alt="Konica Minolta Bizhub C220">
+                            </div>
+                            <div class="product-info">
+                                <h3>Konica Minolta Bizhub C220</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 22 Pages/Min</li>
+                                    <li>Copier / Network Printer / Color Scanner</li>
+                                    <li>Format: Maximum paper size A3</li>
+                                    <li>Resolution: 1200dpi</li>
+                                    <li>Features: Duplex & ARDF</li>
+                                    <li>Media: Print up to 271gsm</li>
+                                </ul>
+                                <div class="product-price">KSh 70,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Konica%20Minolta%20Bizhub%20C220"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 4 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="Konica%20minolta%20bizhub%20c364.jpeg" alt="Konica Minolta Bizhub C364">
+                            </div>
+                            <div class="product-info">
+                                <h3>Konica Minolta Bizhub C364</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 36 Pages/Min (Color & B/W)</li>
+                                    <li>High-volume Multifunction Printer (MFP)</li>
+                                    <li>Resolution: 1200 x 1200 dpi</li>
+                                    <li>Scanning: 160 ipm high-speed scanning</li>
+                                    <li>Interface: 9-inch user-friendly touchscreen</li>
+                                    <li>Features: Advanced color control & finish options</li>
+                                </ul>
+                                <div class="product-price">KSh 100,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Konica%20Minolta%20Bizhub%20C364"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 5 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="Konica%20Minolta%20Bizhub%20C454.jpeg" alt="Konica Minolta Bizhub C454">
+                            </div>
+                            <div class="product-info">
+                                <h3>Konica Minolta Bizhub C454</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 45 Pages/Min (Color & B/W)</li>
+                                    <li>High-speed Multifunction Laser Printer</li>
+                                    <li>Designed for Medium-to-Large Offices</li>
+                                    <li>Resolution: 1200 x 1200 dpi</li>
+                                    <li>Functions: Print, Copy, Scan, Fax</li>
+                                    <li>Features: Advanced productivity & seamless integration</li>
+                                </ul>
+                                <div class="product-price">KSh 115,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Konica%20Minolta%20Bizhub%20C454"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 6: Bizhub C308 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="Konica%20minolta%20bizhub%20c308.jpeg" alt="Konica Minolta Bizhub C308">
+                            </div>
+                            <div class="product-info">
+                                <h3>Konica Minolta Bizhub C308</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 30 ppm (Color & B/W)</li>
+                                    <li>Functions: Copy, Print, Scan (Wireless)</li>
+                                    <li>Resolution: 1200 x 1200 dpi</li>
+                                    <li>New DADF sensor for reduced jams</li>
+                                    <li>Format: Maximum SRA3</li>
+                                    <li>Media: Up to 300 gsm</li>
+                                </ul>
+                                <div class="product-price">KSh 80,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Konica%20Minolta%20Bizhub%20C308"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 7: Bizhub C227 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="Konica%20minolta%20bizhub%20c227.jpeg" alt="Konica Minolta Bizhub C227">
+                            </div>
+                            <div class="product-info">
+                                <h3>Konica Minolta Bizhub C227</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 22 Pages/Min</li>
+                                    <li>Functions: A3 and A4 Coloured Copier</li>
+                                    <li>Efficient Multifunction Performance</li>
+                                </ul>
+                                <div class="product-price">KSh 90,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Konica%20Minolta%20Bizhub%20C227"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 8: Bizhub C287 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="Bizhub%20c%20287.jpeg" alt="Konica Minolta Bizhub C287">
+                            </div>
+                            <div class="product-info">
+                                <h3>Konica Minolta Bizhub C287</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 28 ppm (Color & B/W)</li>
+                                    <li>Compact A3 color multifunction printer (MFP)</li>
+                                    <li>7-inch color touchscreen interface</li>
+                                    <li>Resolution: 1200 x 1200 dpi max</li>
+                                    <li>Scanning: 45 originals/min</li>
+                                    <li>Designed for small to mid-sized offices</li>
+                                </ul>
+                                <div class="product-price">KSh 80,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Konica%20Minolta%20Bizhub%20C287"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 9: Kyocera Taskalfa 3510i -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="3510i.jpeg" alt="Kyocera Taskalfa 3510i">
+                            </div>
+                            <div class="product-info">
+                                <h3>Kyocera Taskalfa 3510i</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 35 ppm (A4)</li>
+                                    <li>Monochrome A3 multifunction printer</li>
+                                    <li>3-in-1: Print, Copy, Scan</li>
+                                    <li>Reliable performance for high-volume office use</li>
+                                </ul>
+                                <div class="product-price">KSh 95,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Kyocera%20Taskalfa%203510i"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 10: Kyocera Taskalfa 3511i -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="Kyocera%20Taskalfa%203511i.jpeg" alt="Kyocera Taskalfa 3511i">
+                            </div>
+                            <div class="product-info">
+                                <h3>Kyocera Taskalfa 3511i</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 35 ppm (A4) in B/W</li>
+                                    <li>Printing: Standard network and mobile printing</li>
+                                    <li>Scanning: High-quality colour scanning</li>
+                                    <li>Features: One-path duplex & reversing document processors</li>
+                                    <li>Reliability: Long-life components for maximum efficiency</li>
+                                </ul>
+                                <div class="product-price">KSh 85,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Kyocera%20Taskalfa%203511i"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 11: Kyocera Ecosys M4125idn -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="Kyocera%20Ecosys%20M4125idn.jpeg" alt="Kyocera Ecosys M4125idn">
+                            </div>
+                            <div class="product-info">
+                                <h3>Kyocera Ecosys M4125idn</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 25 ppm (A4/A3 monochrome)</li>
+                                    <li>Type: A4/A3 Monochrome Multifunction</li>
+                                    <li>Reliability: Long-life components for exceptional durability</li>
+                                    <li>Efficiency: High-performance printing for small to medium teams</li>
+                                </ul>
+                                <div class="product-price">KSh 290,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Kyocera%20Ecosys%20M4125idn"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Photocopier 12: Kyocera Ecosys M2135dn -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="Kyocera%20Ecosys%20M2135dn.jpeg" alt="Kyocera Ecosys M2135dn">
+                            </div>
+                            <div class="product-info">
+                                <h3>Kyocera Ecosys M2135dn</h3>
+                                <ul
+                                    style="font-size: 0.8rem; margin-bottom: 15px; list-style: disc; padding-left: 15px;">
+                                    <li>Speed: 35 ppm (A4)</li>
+                                    <li>Type: Multifunction Monochrome Laser Printer</li>
+                                    <li>Functions: Print, Copy, and Scan</li>
+                                    <li>Reliability: Highly efficient for daily office tasks</li>
+                                </ul>
+                                <div class="product-price">KSh 105,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20Kyocera%20Ecosys%20M2135dn"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Toner 1 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="TN%20Toner%20216.jpeg" alt="TN 216 Toner">
+                            </div>
+                            <div class="product-info">
+                                <h3>TN 216 Toner Cartridge</h3>
+                                <p>Genuine Konica Minolta TN-216 toner. Optimized for Bizhub C220, C280, and C360 models
+                                    for vibrant, professional results.</p>
+                                <div class="product-price">KSh 4,500</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20TN%20216%20Toner%20Cartridge"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                        <!-- Toner 2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="Tn%20321%20toner.jpeg" alt="TN 321 Toner">
+                            </div>
+                            <div class="product-info">
+                                <h3>TN 321 Toner Cartridge</h3>
+                                <p>Premium Konica Minolta TN-321 toner cartidge. High-yield performance for Bizhub C224,
+                                    C284, and C364 series.</p>
+                                <div class="product-price">KSh 5,000</div>
+                                <a href="https://wa.me/254726895268?text=I'm%20interested%20in%20a%20quote%20for%20the%20TN%20321%20Toner%20Cartridge"
+                                    class="btn btn-primary" style="width: 100%; text-align: center;"
+                                    target="_blank">Request Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-box">
+                    <a href="index.html" class="logo footer-logo-bg"><img src="Steina%20logo.jpeg"
+                            alt="Steina Technologies"></a>
+                    <p>Nairobi’s premier hub for office automation and personal computing. Hardware and Heartbeat.</p>
+                </div>
+                <div class="footer-box">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop Products</a></li>
+                        <li><a href="contact.html">Repair Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4>Business Hours</h4>
+                    <p>Mon - Fri: 8:00 AM – 6:00 PM</p>
+                    <p>Sat: 9:00 AM – 4:00 PM</p>
+                    <p>Sun: Closed</p>
+                </div>
+                <div class="footer-box">
+                    <h4>Find Us</h4>
+                    <p>Anna's Arcade Building, Tom Mboya Street, Nairobi, Kenya</p>
+                    <p>Phone: +254 726 895 268</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Steina Technologies Solution. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/254726895268" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
