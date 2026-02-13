@@ -19,11 +19,11 @@ if (searchInput) {
     searchInput.addEventListener('keyup', (e) => {
         const query = e.target.value.toLowerCase();
         const products = document.querySelectorAll('.product-card');
-        
+
         products.forEach(product => {
             const title = product.querySelector('h3').textContent.toLowerCase();
             const desc = product.querySelector('p').textContent.toLowerCase();
-            
+
             if (title.includes(query) || desc.includes(query)) {
                 product.style.display = 'block';
             } else {
@@ -47,3 +47,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+// Mobile Nav Toggle
+const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileNavToggle && navLinks) {
+    mobileNavToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileNavToggle.classList.toggle('fa-times');
+        mobileNavToggle.classList.toggle('fa-bars');
+    });
+}

@@ -133,16 +133,13 @@ nav {
 
 .logo img {
   height: 120px;
-  /* Doubled size for high visibility */
   width: auto;
   transition: var(--transition);
-  mix-blend-mode: multiply;
-  /* Removes white background on light headers */
-  filter: contrast(1.1) brightness(1.1);
-  /* Pushes near-white to pure white to ensure blending */
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  /* Soft shadow to distinguish on white */
 }
 
 .footer-box .logo img {
@@ -172,8 +169,20 @@ nav {
   gap: 30px;
 }
 
+.nav-links a.active {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
 .nav-links a:hover {
   color: var(--magenta);
+}
+
+.mobile-nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--black);
 }
 
 .search-bar {
@@ -451,13 +460,38 @@ footer {
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+  .nav-links {
+    position: fixed;
+    top: 90px;
+    left: -100%;
+    width: 80%;
+    height: calc(100vh - 90px);
+    background: var(--white);
+    flex-direction: column;
+    padding: 40px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
-  }
-
-  .nav-links {
-    display: none;
   }
 
   .hero {
